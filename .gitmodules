@@ -1,0 +1,6 @@
+[submodule "third_parts/libevent"]
+	path = third_parts/libevent
+	url = https://github.com/libevent/libevent.git
+[submodule "third_parts/googletest"]
+	path = third_parts/googletest
+	url = https://github.com/google/googletest.git
