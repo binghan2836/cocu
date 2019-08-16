@@ -18,14 +18,16 @@ SET (EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/out/bin/)
 
 configure_file (
   "${PROJECT_SOURCE_DIR}/includes/config.h.in"
-  "${PROJECT_SOURCE_DIR}/includes/config.h"
+  "${CMAKE_CURRENT_BINARY_DIR}/includes/config.h"
   )
 option(OUTPUT2CONSOLE "write log to console" ON)
-
 
 INCLUDE_DIRECTORIES(
 	./third_parts/googletest/googletest/include/
 	./third_parts/googletest/googlemock/include/
+  ./third_parts/libevent/include/
+  ${CMAKE_BINARY_DIR}/third_parts/libevent/include/
+  ${CMAKE_CURRENT_BINARY_DIR}/includes/
 	./includes/
 )
 
